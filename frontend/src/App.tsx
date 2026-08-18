@@ -38,42 +38,42 @@ function App() {
     }
   }, [justSwitched]);
 
-  // 加载画作数据
-  useEffect(() => {
-    const loadData = async () => {
+  const loadData = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+
+      const meta = await fetchActivePainting();
+      setMetadata(meta);
+
+      const anns = await fetchAnnotations(meta.painting_id);
+      setAnnotations(anns);
+
       try {
-        setLoading(true);
-        setError(null);
-
-
-        const meta = await fetchActivePainting();
-        setMetadata(meta);
-
-        const anns = await fetchAnnotations(meta.painting_id);
-        setAnnotations(anns);
-
-        try {
-          const tourData = await fetchTour(meta.painting_id);
-          setTour(tourData);
-        } catch {
-          console.warn('导览数据加载失败');
-        }
-
-        // 加载 VR 配置
-        try {
-          const res = await fetch(
-            `${import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'}/static/data/${meta.painting_id}/vr_scene.json`
-          );
-          if (res.ok) setVrConfig(await res.json());
-        } catch {
-          console.warn('VR 场景配置加载失败');
-        }
-      } catch (err: any) {
-        setError(err.message || '数据加载失败，请确认后端服务已启动');
-      } finally {
-        setLoading(false);
+        const tourData = await fetchTour(meta.painting_id);
+        setTour(tourData);
+      } catch {
+        console.warn('导览数据加载失败');
       }
-    };
+
+      // 加载 VR 配置
+      try {
+        const res = await fetch(
+          `${import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'}/static/data/${meta.painting_id}/vr_scene.json`
+        );
+        if (res.ok) setVrConfig(await res.json());
+      } catch {
+        console.warn('VR 场景配置加载失败');
+      }
+    } catch (err: any) {
+      setError(err.message || '数据加载失败，请确认后端服务已启动');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // 初始加载画作数据
+  useEffect(() => {
     loadData();
   }, []);
 
@@ -82,18 +82,20 @@ function App() {
       setShowSelector(false);
       return;
     }
-    setLoading(true);
-    try {
-      // Instead of relying on a stateful backend, we store the choice in the frontend
-      localStorage.setItem('activePaintingId', newId);
-      localStorage.setItem('justSwitched', 'true');
-      setShowSelector(false);
-      window.location.reload();
-    } catch (err) {
-      console.error('切换失败', err);
-      setShowSelector(false);
-      setLoading(false);
-    }
+    
+    // Store the new choice
+    localStorage.setItem('activePaintingId', newId);
+    setShowSelector(false);
+    
+    // Fetch new data instead of reloading page
+    await loadData();
+    
+    // Reset view state
+    setViewMode('appreciate');
+    setTourActive(false);
+    setViewerZoom(null);
+    setSelectedAnnotation(null);
+    setActiveAnnotationId(null);
   };
 
   const handleAnnotationClick = useCallback((annotationId: string, annotation: Annotation) => {
