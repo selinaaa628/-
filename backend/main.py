@@ -32,11 +32,14 @@ MANIFEST_PATH = DATA_DIR / "manifest.json"
 
 
 # 1. 全局初始化服务 (Vercel Serverless 环境不支持 ASGI lifespan)
+GLOBAL_INIT_ERROR = None
 try:
     manifest_svc = init_manifest_service(str(MANIFEST_PATH))
     active_id = manifest_svc.get_active_painting_id()
     logger.info(f"✅ Manifest 加载成功，当前激活画作: {active_id}")
 except Exception as e:
+    import traceback
+    GLOBAL_INIT_ERROR = traceback.format_exc()
     logger.error(f"❌ Manifest 加载失败: {e}")
 
 try:
@@ -98,6 +101,20 @@ app.include_router(ask.router)
 @app.get("/")
 async def root():
     return {"message": "中国古画智能鉴赏系统 API", "version": "1.0.0", "docs": "/docs"}
+
+
+@app.get("/api/debug")
+async def debug_info():
+    import os, traceback
+    return {
+        "init_error": str(GLOBAL_INIT_ERROR) if 'GLOBAL_INIT_ERROR' in globals() else None,
+        "cwd": os.getcwd(),
+        "files_in_root": os.listdir("."),
+        "files_in_data": os.listdir("data") if os.path.exists("data") else None,
+        "PROJECT_ROOT": str(PROJECT_ROOT),
+        "MANIFEST_PATH": str(MANIFEST_PATH),
+        "MANIFEST_EXISTS": os.path.exists(MANIFEST_PATH),
+    }
 
 
 @app.post("/api/manifest/reload")
