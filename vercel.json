@@ -4,10 +4,7 @@
   "outputDirectory": "frontend/dist",
   "functions": {
     "api/**/*.py": {
-      "includeFiles": [
-        "data/**",
-        "backend/**"
-      ],
+      "includeFiles": "{data,backend}/**",
       "excludeFiles": "frontend/**"
     }
   },
