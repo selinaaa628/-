@@ -1,0 +1,44 @@
+[
+  {
+    "annotation_id": "xunyang_1",
+    "coordinates": {
+      "x": 0.55,
+      "y": 0.55,
+      "width": 0.15,
+      "height": 0.2
+    },
+    "label": "琵琶女",
+    "short_description": "犹抱琵琶半遮面的倡女，在客船上弹奏琵琶。",
+    "long_description": "画中生动刻画了白居易《琵琶行》中的核心人物——琵琶女。她虽沦落天涯，但弹奏琵琶的技艺依然高超。仇英以细腻的笔法描绘了她的身姿和神态，仿佛能让人听到那“大珠小珠落玉盘”的凄切乐音。",
+    "type": "character",
+    "related_topics": ["琵琶女", "琵琶行", "音乐", "明代服饰"]
+  },
+  {
+    "annotation_id": "xunyang_2",
+    "coordinates": {
+      "x": 0.72,
+      "y": 0.55,
+      "width": 0.15,
+      "height": 0.2
+    },
+    "label": "白居易与客",
+    "short_description": "江州司马白居易与友人静静聆听琵琶曲。",
+    "long_description": "画面右侧的客船上，白居易与友人正在倾听琵琶声。白居易此时被贬江州，心境凄凉。听到琵琶女的身世后，发出了“同是天涯沦落人，相逢何必曾相识”的千古长叹。人物的神情中透着淡淡的哀愁。",
+    "type": "character",
+    "related_topics": ["白居易", "江州司马", "同是天涯沦落人"]
+  },
+  {
+    "annotation_id": "xunyang_3",
+    "coordinates": {
+      "x": 0.82,
+      "y": 0.15,
+      "width": 0.15,
+      "height": 0.2
+    },
+    "label": "浔阳秋景",
+    "short_description": "萧瑟的秋风与江景，渲染了离别的凄清气氛。",
+    "long_description": "仇英用青绿山水的技法描绘了浔阳江头的秋景。江水微波，芦苇摇曳，枫叶泛黄，完美契合了原诗中“浔阳江头夜送客，枫叶荻花秋瑟瑟”的悲凉意境。",
+    "type": "scenery",
+    "related_topics": ["浔阳江", "秋景", "青绿山水", "环境烘托"]
+  }
+]

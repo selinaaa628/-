@@ -1,0 +1,66 @@
+{
+  "scene_id": "demo_painting_vr",
+  "painting_id": "demo_painting",
+  "exhibition_hall": {
+    "name": "寒江独钓厅",
+    "ambient_light": 0.4,
+    "background_color": "#1a1008",
+    "fog_density": 0.02,
+    "fog_color": "#2a1f10"
+  },
+  "painting_panel": {
+    "width": 5.0,
+    "height": 2.67,
+    "center": { "x": 0.0, "y": 1.6, "z": -3.0 },
+    "rotation": { "x": 0.0, "y": 0.0, "z": 0.0 },
+    "frame_color": "#8B6914",
+    "frame_thickness": 0.08
+  },
+  "camera_start": { "x": 0.0, "y": 1.6, "z": 3.0 },
+  "hotspots_3d": [
+    {
+      "annotation_id": "region_001",
+      "position": { "x": 0.9, "y": -0.15, "z": -3.0 },
+      "scale": 0.1,
+      "color": "#0055FF"
+    },
+    {
+      "annotation_id": "region_003",
+      "position": { "x": 0.4, "y": -0.45, "z": -3.0 },
+      "scale": 0.08,
+      "color": "#00CC44"
+    },
+    {
+      "annotation_id": "region_004",
+      "position": { "x": 0.75, "y": -0.1, "z": -3.0 },
+      "scale": 0.09,
+      "color": "#8800CC"
+    },
+    {
+      "annotation_id": "region_005",
+      "position": { "x": 1.55, "y": 0.8, "z": -3.0 },
+      "scale": 0.07,
+      "color": "#DD2200"
+    },
+    {
+      "annotation_id": "region_006",
+      "position": { "x": 0.5, "y": -0.1, "z": -3.0 },
+      "scale": 0.12,
+      "color": "#CC8800"
+    }
+  ],
+  "ambient_objects": [
+    {
+      "type": "floor",
+      "texture": "wood_dark",
+      "width": 20,
+      "depth": 20
+    },
+    {
+      "type": "spotlight",
+      "target": "painting_panel",
+      "intensity": 1.5,
+      "position": { "x": 0.0, "y": 4.0, "z": -1.0 }
+    }
+  ]
+}

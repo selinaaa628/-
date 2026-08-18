@@ -1,0 +1,49 @@
+{
+  "painting_id": "qy_gaoshan",
+  "steps": [
+    {
+      "step_id": 1,
+      "title": "概览全图",
+      "description": "请纵观全画，感受高山流水的深远意境。仇英以细腻的笔触勾勒出山石的巍峨与松树的挺拔，为伯牙子期的知音之遇营造了清幽的自然环境。",
+      "viewer_center": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "viewer_zoom": 1.2,
+      "linked_annotation_id": null
+    },
+    {
+      "step_id": 2,
+      "title": "伯牙抚琴",
+      "description": "画面中心的这位雅士便是俞伯牙。他端坐石上，全神贯注地抚弄古琴，指尖流泻出“峨峨兮若泰山”、“洋洋兮若江河”的千古绝唱。",
+      "viewer_center": {
+        "x": 0.45,
+        "y": 0.65
+      },
+      "viewer_zoom": 2.5,
+      "linked_annotation_id": "gaoshan_1"
+    },
+    {
+      "step_id": 3,
+      "title": "子期倾听",
+      "description": "他对面这位凝神倾听的便是钟子期。唯有他能听懂琴声中的高山流水之意，两人由此结下了深厚的知音之情。",
+      "viewer_center": {
+        "x": 0.65,
+        "y": 0.65
+      },
+      "viewer_zoom": 2.5,
+      "linked_annotation_id": "gaoshan_2"
+    },
+    {
+      "step_id": 4,
+      "title": "环境烘托",
+      "description": "仔细看人物周围的太湖石和苍松。仇英精工秀丽的画风在这里展现得淋漓尽致，环境的清幽进一步衬托出两位知音的高洁脱俗。",
+      "viewer_center": {
+        "x": 0.3,
+        "y": 0.4
+      },
+      "viewer_zoom": 2.0,
+      "linked_annotation_id": "gaoshan_3"
+    }
+  ]
+}

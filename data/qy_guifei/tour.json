@@ -1,0 +1,39 @@
+{
+  "title": "《贵妃晓妆》导览",
+  "duration_minutes": 2,
+  "steps": [
+    {
+      "step_id": "step_1",
+      "annotation_id": "region_guifei_1",
+      "narration": "欢迎观赏明代仇英的《人物故事图册 - 贵妃晓妆》。我们首先来看看画面左侧：桃花树下，侍女正轻巧地攀折花枝，准备为贵妃插戴，生动再现了唐朝宫廷的簪花习俗。",
+      "viewer_center": {
+        "x": 0.425,
+        "y": 0.5
+      },
+      "viewer_zoom": 2.5,
+      "duration_seconds": 10
+    },
+    {
+      "step_id": "step_2",
+      "annotation_id": "region_guifei_2",
+      "narration": "视线移向画面的中央，一位手持团扇的绿衣仕女静立旁观。仇英以极其细腻的“游丝描”勾勒出她衣袂的流畅线条，尽显明代文人心中清雅端庄的女性之美。",
+      "viewer_center": {
+        "x": 0.625,
+        "y": 0.55
+      },
+      "viewer_zoom": 2.5,
+      "duration_seconds": 10
+    },
+    {
+      "step_id": "step_3",
+      "annotation_id": "region_guifei_3",
+      "narration": "最后，请留意右侧的红裙侍女。她正细心浇灌着石坛中盛放的牡丹。杨贵妃生平极爱牡丹，此处红裙与娇艳的牡丹相互映衬，体现了仇英工笔重彩的非凡造诣。",
+      "viewer_center": {
+        "x": 0.825,
+        "y": 0.65
+      },
+      "viewer_zoom": 2.5,
+      "duration_seconds": 10
+    }
+  ]
+}

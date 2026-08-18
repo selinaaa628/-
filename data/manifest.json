@@ -1,0 +1,43 @@
+{
+  "active_painting_id": "qy_gaoshan",
+  "candidate_paintings": [
+    "qy_guifei",
+    "qy_gaoshan",
+    "qy_xunyang"
+  ],
+  "paintings": {
+    "qy_guifei": {
+      "metadata": "./qy_guifei/metadata.json",
+      "annotations": "./qy_guifei/annotations.json",
+      "tour": "./qy_guifei/tour.json",
+      "layers": "",
+      "image_url": "/static/data/qy_guifei/image.jpg",
+      "image_pyramid": null,
+      "vector_index": "./qiuying_album/vector_store/index.faiss",
+      "vector_texts": "./qiuying_album/vector_store/index_texts.json",
+      "vr_scene": null
+    },
+    "qy_gaoshan": {
+      "metadata": "./qy_gaoshan/metadata.json",
+      "annotations": "./qy_gaoshan/annotations.json",
+      "tour": "./qy_gaoshan/tour.json",
+      "layers": "",
+      "image_url": "/static/data/qy_gaoshan/image.jpg",
+      "image_pyramid": null,
+      "vector_index": "./qiuying_album/vector_store/index.faiss",
+      "vector_texts": "./qiuying_album/vector_store/index_texts.json",
+      "vr_scene": null
+    },
+    "qy_xunyang": {
+      "metadata": "./qy_xunyang/metadata.json",
+      "annotations": "./qy_xunyang/annotations.json",
+      "tour": "./qy_xunyang/tour.json",
+      "layers": "",
+      "image_url": "/static/data/qy_xunyang/image.jpg",
+      "image_pyramid": null,
+      "vector_index": "./qiuying_album/vector_store/index.faiss",
+      "vector_texts": "./qiuying_album/vector_store/index_texts.json",
+      "vr_scene": null
+    }
+  }
+}

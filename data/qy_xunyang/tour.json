@@ -1,0 +1,49 @@
+{
+  "painting_id": "qy_xunyang",
+  "steps": [
+    {
+      "step_id": 1,
+      "title": "浔阳秋瑟",
+      "description": "请总览全图。画面上江水苍茫，荻花摇曳。仇英用其擅长的青绿设色，为整幅画作定下了“浔阳江头夜送客，枫叶荻花秋瑟瑟”的悲凉基调。",
+      "viewer_center": {
+        "x": 0.75,
+        "y": 0.5
+      },
+      "viewer_zoom": 2.1,
+      "linked_annotation_id": null
+    },
+    {
+      "step_id": 2,
+      "title": "画舫佳人",
+      "description": "画面左侧的画舫上，琵琶女正低头拨弦。“千呼万唤始出来，犹抱琵琶半遮面”，她的身世与哀婉的琴声在此刻交织。",
+      "viewer_center": {
+        "x": 0.62,
+        "y": 0.65
+      },
+      "viewer_zoom": 4.0,
+      "linked_annotation_id": "xunyang_1"
+    },
+    {
+      "step_id": 3,
+      "title": "司马青衫",
+      "description": "右侧客船中，白居易与客对坐，静静倾听。此情此景，令他触景生情，发出“同是天涯沦落人，相逢何必曾相识”的长叹。那青衫上的点点泪痕，仿佛也跃然纸上。",
+      "viewer_center": {
+        "x": 0.79,
+        "y": 0.65
+      },
+      "viewer_zoom": 4.0,
+      "linked_annotation_id": "xunyang_2"
+    },
+    {
+      "step_id": 4,
+      "title": "景中寓情",
+      "description": "除了人物，请注意远处空旷的江面和孤月。仇英将文学诗意完美转化为视觉图像，景物的清冷与人物内心的孤寂达到了高度的融合。",
+      "viewer_center": {
+        "x": 0.89,
+        "y": 0.25
+      },
+      "viewer_zoom": 4.0,
+      "linked_annotation_id": "xunyang_3"
+    }
+  ]
+}

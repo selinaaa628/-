@@ -1,0 +1,44 @@
+[
+  {
+    "annotation_id": "region_guifei_1",
+    "painting_id": "qy_guifei",
+    "label": "折花侍女",
+    "short_description": "左侧桃花树下，侍女正攀枝折花，准备为贵妃插簪。",
+    "description": "唐代宫廷有“探撷鲜花插髻”的风尚。画面左侧，一名侍女正踮起脚尖，伸手折取盛开的桃花。仇英以细腻的笔触刻画了侍女柔美的身段与生动的神态，呼应了“爱牡丹、喜簪花”的历史背景。",
+    "coordinates": {
+      "x": 0.35,
+      "y": 0.1,
+      "width": 0.15,
+      "height": 0.8
+    },
+    "related_topics": ["簪花", "侍女", "桃花"]
+  },
+  {
+    "annotation_id": "region_guifei_2",
+    "painting_id": "qy_guifei",
+    "label": "持扇仕女",
+    "short_description": "画面中央，身着绿衣的仕女手持团扇，静静旁观。",
+    "description": "这位身着绿衣的仕女姿态优雅，手持团扇，眼神专注地看着周围的活动。她的服饰线条流畅（游丝描），色彩清新，体现了明代仕女画的典型审美特征——清秀、端庄。",
+    "coordinates": {
+      "x": 0.55,
+      "y": 0.2,
+      "width": 0.15,
+      "height": 0.7
+    },
+    "related_topics": ["团扇", "服饰", "明代审美"]
+  },
+  {
+    "annotation_id": "region_guifei_3",
+    "painting_id": "qy_guifei",
+    "label": "浇花侍女",
+    "short_description": "右侧花坛边，红裙侍女正在悉心照料盛开的牡丹。",
+    "description": "杨贵妃极度偏爱牡丹。画面右侧石坛内牡丹盛开，一名身穿鲜艳红裙的侍女正手持长柄水勺为牡丹浇水。红裙与绿叶红花相互辉映，色彩浓烈而不失高雅，展现了仇英高超的工笔重彩技法。",
+    "coordinates": {
+      "x": 0.75,
+      "y": 0.4,
+      "width": 0.15,
+      "height": 0.5
+    },
+    "related_topics": ["牡丹", "工笔重彩", "杨贵妃"]
+  }
+]

@@ -1,0 +1,110 @@
+/* Global stylesheet for the Chinese Ancient Painting Appreciation System */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+
+:root {
+  /* Guofeng Theme Variables */
+  --font-family-serif: 'FangSong', 'STFangsong', '华文仿宋', 'Noto Serif SC', 'Songti SC', serif;
+  --font-family-sans: 'FangSong', 'STFangsong', '华文仿宋', 'Inter', system-ui, sans-serif;
+  --font-family: var(--font-family-serif); /* User requested ALL fonts to be FangSong */
+  
+  --color-bg: #EAE5D9; /* Rice paper beige */
+  --color-bg-card: rgba(247, 243, 232, 0.85); /* Slightly lighter beige for cards */
+  --color-fg: #2C2C2C; /* Dark ink */
+  --color-primary: #8B4513; /* Saddle brown / Ochre accent */
+  --color-accent: #A63C3C; /* Cinnabar red */
+  --color-success: #4A5D23; /* Olive/bamboo green */
+  --color-error: #8B2500;
+  
+  --radius: 4px; /* Sharper corners for classic look */
+  --shadow: 0 4px 16px rgba(0,0,0,0.08);
+  --border-classic: 1px solid rgba(44, 44, 44, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  /* Subtle noise texture or gradient to simulate paper */
+  background: var(--color-bg);
+  background-image: radial-gradient(circle at center, #F2EFE6 0%, #EAE5D9 100%);
+  color: var(--color-fg);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Loading screen */
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--color-bg);
+}
+.loading-content {
+  text-align: center;
+  animation: fadeIn 0.8s ease-out;
+}
+.loading-content h2 {
+  font-family: var(--font-family-serif);
+  color: var(--color-fg);
+  font-size: 1.8rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+.loading-content p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.loading-brush {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
+}
+.ink-drop {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: var(--color-fg); /* Ink color */
+  border-radius: 50%;
+  left: 50%;
+  margin-left: -8px;
+  animation: drop 1.5s infinite ease-in-out;
+}
+.ink-drop.delay-1 { animation-delay: 0.5s; background: var(--color-accent); }
+.ink-drop.delay-2 { animation-delay: 1s; opacity: 0.5; }
+
+@keyframes drop {
+  0% { transform: translateY(0) scale(1); opacity: 0.8; }
+  70% { transform: translateY(-60px) scale(0.4); opacity: 0.3; }
+  100% { transform: translateY(-80px) scale(0.1); opacity: 0; }
+}
+
+/* Error screen */
+.error-screen { display: flex; justify-content: center; align-items: center; height: 100vh; background: var(--color-bg); }
+.error-content { max-width: 480px; background: var(--color-bg-card); padding: 2rem; border-radius: var(--radius); box-shadow: var(--shadow); text-align: center; border: var(--border-classic); }
+.error-content h2 { font-family: var(--font-family-serif); color: var(--color-fg); }
+.error-icon { font-size: 3rem; margin-bottom: 0.5rem; }
+.retry-btn { margin-top: 1rem; background: var(--color-fg); color: #EAE5D9; border: none; padding: 0.6rem 1.2rem; border-radius: var(--radius); cursor: pointer; font-family: var(--font-family-serif); letter-spacing: 0.1em; }
+.retry-btn:hover { background: var(--color-accent); }
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: rgba(0,0,0,0.03); }
+::-webkit-scrollbar-thumb { background: rgba(44,44,44,0.3); border-radius: var(--radius); }
+::-webkit-scrollbar-thumb:hover { background: rgba(44,44,44,0.5); }
+
+@media (max-width: 960px) {
+  .app-header { flex-direction: column; align-items: flex-start; }
+  .appreciate-layout { flex-direction: column; }
+  .viewer-section, .chat-section { flex: none; height: 50vh; }
+}

@@ -1,0 +1,32 @@
+{
+  "painting_id": "demo_painting",
+  "layers": [
+    {
+      "layer_id": "base",
+      "name": "原作底图",
+      "type": "base_image",
+      "url": "./data/demo_painting/painting.jpg",
+      "opacity": 1.0,
+      "visible": true,
+      "description": "原始高清画作图像"
+    },
+    {
+      "layer_id": "xray",
+      "name": "X射线底稿层",
+      "type": "overlay_image",
+      "url": "./data/demo_painting/layers/xray.jpg",
+      "opacity": 0.6,
+      "visible": false,
+      "description": "X射线扫描图像，可见底稿勾线与修改痕迹（演示占位）"
+    },
+    {
+      "layer_id": "infrared",
+      "name": "红外反射层",
+      "type": "overlay_image",
+      "url": "./data/demo_painting/layers/infrared.jpg",
+      "opacity": 0.6,
+      "visible": false,
+      "description": "红外反射图像，显示碳基墨迹层（演示占位）"
+    }
+  ]
+}

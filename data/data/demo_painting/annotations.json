@@ -1,0 +1,92 @@
+[
+  {
+    "annotation_id": "region_001",
+    "label": "孤舟渔翁",
+    "type": "composition",
+    "coordinates": {
+      "x": 0.62,
+      "y": 0.70,
+      "width": 0.18,
+      "height": 0.14
+    },
+    "short_description": "画面核心——渔翁独坐一叶扁舟，垂钓于寒江之上，寂寥而悠然。",
+    "long_description": "马远将渔翁置于画面右下角，以极少笔墨勾勒出扁舟轮廓与渔翁蓑笠，形态简洁却神韵完足。人物身形微倾，专注垂钓，与周围大面积留白形成强烈的虚实对比，营造出'天地之大，吾独于此'的禅意境界。",
+    "related_topics": ["边角构图", "留白艺术", "渔隐文化"],
+    "source_refs": ["doc_001", "doc_003"]
+  },
+  {
+    "annotation_id": "region_002",
+    "label": "留白意境",
+    "type": "composition",
+    "coordinates": {
+      "x": 0.05,
+      "y": 0.05,
+      "width": 0.55,
+      "height": 0.80
+    },
+    "short_description": "画面大面积留白，以虚代实，象征烟波浩渺的寒江。",
+    "long_description": "宋代绘画美学中，'留白'（负空间）是最高境界之一。此画约75%的面积为空白，观者视觉与心理自动填补出广袤无垠的江面、弥漫的寒气与孤寂的氛围。这种'无画处皆成妙境'的手法，是中国画独有的哲学表达。",
+    "related_topics": ["负空间", "宋代美学", "虚实相生"],
+    "source_refs": ["doc_002"]
+  },
+  {
+    "annotation_id": "region_003",
+    "label": "水波纹墨法",
+    "type": "brushwork",
+    "coordinates": {
+      "x": 0.45,
+      "y": 0.75,
+      "width": 0.30,
+      "height": 0.15
+    },
+    "short_description": "以寥寥数笔的水波纹表现江面涟漪，笔法精炼而传神。",
+    "long_description": "马远以简练的'折芦描'与细波纹线条表现寒江水面。几条轻淡的弧线既暗示了水的流动感，又烘托出寒冬江面的凝重静谧。此笔法要求笔笔到位、不可修改，体现了宋代画家对笔墨控制的极高造诣。",
+    "related_topics": ["水墨技法", "折芦描", "线条韵律"],
+    "source_refs": ["doc_004"]
+  },
+  {
+    "annotation_id": "region_004",
+    "label": "渔隐象征",
+    "type": "symbolism",
+    "coordinates": {
+      "x": 0.58,
+      "y": 0.65,
+      "width": 0.25,
+      "height": 0.25
+    },
+    "short_description": "渔翁形象是中国文人隐逸思想的经典象征符号。",
+    "long_description": "中国文化中，'渔父'自《楚辞》以来便是隐士的代名词。宋代文人常借渔隐图表达对仕途纷扰的厌倦与对自然自在的向往。马远此画创作于南宋偏安江南之际，渔翁的孤寂或暗含对家国飘零的感怀，具有深刻的历史与精神内涵。",
+    "related_topics": ["渔父文化", "隐逸思想", "楚辞传统", "南宋文化"],
+    "source_refs": ["doc_002", "doc_005"]
+  },
+  {
+    "annotation_id": "region_005",
+    "label": "题款印章",
+    "type": "inscription_seal",
+    "coordinates": {
+      "x": 0.78,
+      "y": 0.08,
+      "width": 0.18,
+      "height": 0.20
+    },
+    "short_description": "画幅右上角的收藏印章，记录了此画的流传历史。",
+    "long_description": "中国古画上的印章（钤印）是鉴定真伪与追溯流传的重要依据。此画留存有多方历代收藏印，经鉴定专家比对印谱，可梳理出其从中国流传至日本的完整收藏脉络，是研究中日文化交流史的珍贵实物证据。",
+    "related_topics": ["鉴藏印章", "书画流传", "中日文化交流"],
+    "source_refs": ["doc_006"]
+  },
+  {
+    "annotation_id": "region_006",
+    "label": "边角构图法",
+    "type": "historical_detail",
+    "coordinates": {
+      "x": 0.50,
+      "y": 0.50,
+      "width": 0.45,
+      "height": 0.45
+    },
+    "short_description": "马远独创的'边角构图'打破了北宋全景山水的传统范式。",
+    "long_description": "北宋山水画惯用'三远法'（平远、高远、深远）铺陈全景，而马远大胆将景物压缩至画面一角，以偏概全，开创了'残山剩水'的美学风格。这一构图革新对后世影响深远，也因此画家获得了'马一角'的美誉，与夏圭的'夏半边'并称南宋院体山水的两大风格流派。",
+    "related_topics": ["三远法", "南宋院体", "构图革命", "夏圭"],
+    "source_refs": ["doc_001", "doc_007"]
+  }
+]

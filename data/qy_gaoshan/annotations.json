@@ -1,0 +1,44 @@
+[
+  {
+    "annotation_id": "gaoshan_1",
+    "coordinates": {
+      "x": 0.4,
+      "y": 0.6,
+      "width": 0.1,
+      "height": 0.1
+    },
+    "label": "伯牙抚琴",
+    "short_description": "俞伯牙端坐抚琴，神态专注。",
+    "long_description": "画面中心是俞伯牙，他正全神贯注地弹奏古琴。据传他擅长琴技，琴声能表达高山之巍峨与流水之绵延。画中人物用铁线描，笔触细致入微，展现了文人雅士的风范。",
+    "type": "character",
+    "related_topics": ["伯牙", "古琴", "知音", "高山流水"]
+  },
+  {
+    "annotation_id": "gaoshan_2",
+    "coordinates": {
+      "x": 0.6,
+      "y": 0.6,
+      "width": 0.1,
+      "height": 0.1
+    },
+    "label": "子期倾听",
+    "short_description": "钟子期凝神倾听琴音，领悟琴中意境。",
+    "long_description": "钟子期坐在伯牙对面，姿态放松而神情专注。他是唯一能听懂伯牙琴声中“峨峨兮若泰山”、“洋洋兮若江河”之意的人。两人之间通过无形的琴声建立了深厚的精神共鸣。",
+    "type": "character",
+    "related_topics": ["钟子期", "知音", "精神共鸣"]
+  },
+  {
+    "annotation_id": "gaoshan_3",
+    "coordinates": {
+      "x": 0.2,
+      "y": 0.3,
+      "width": 0.2,
+      "height": 0.2
+    },
+    "label": "苍松怪石",
+    "short_description": "苍古的松树与嶙峋的太湖石，烘托高古气氛。",
+    "long_description": "仇英在人物周围布置了苍翠挺拔的松树和嶙峋多姿的太湖石。松石不仅在构图上起到了稳定画面的作用，也暗喻了人物高洁脱俗的品格和隐逸的自然环境。",
+    "type": "scenery",
+    "related_topics": ["松树", "太湖石", "隐逸"]
+  }
+]

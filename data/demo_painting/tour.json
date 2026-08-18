@@ -1,0 +1,48 @@
+{
+  "tour_id": "basic_tour",
+  "title": "《寒江独钓图》精赏导览",
+  "description": "跟随策展人的视角，探索这幅传世名作的构图奥秘与人文内涵",
+  "duration_minutes": 8,
+  "steps": [
+    {
+      "step_index": 1,
+      "target_annotation_id": "region_001",
+      "viewer_zoom": 3.0,
+      "viewer_center": { "x": 0.71, "y": 0.77 },
+      "narration": "欢迎来到《寒江独钓图》的赏析之旅。请先将目光投向画面右下角——那一叶孤舟与垂钓渔翁，正是整幅画的精神核心。马远仅用寥寥数笔，便勾勒出这位超然世外的隐者形象。",
+      "audio_url": "./data/demo_painting/audio/step_001.mp3"
+    },
+    {
+      "step_index": 2,
+      "target_annotation_id": "region_002",
+      "viewer_zoom": 1.2,
+      "viewer_center": { "x": 0.3, "y": 0.4 },
+      "narration": "现在请退一步，感受整幅画的气场。你注意到了吗——画面约四分之三的面积是空白。这大片留白并非'没有画'，而是在传递寒冬烟江的辽阔与孤寂。中国画以'无'胜'有'的哲学，在此得到了极致体现。",
+      "audio_url": "./data/demo_painting/audio/step_002.mp3"
+    },
+    {
+      "step_index": 3,
+      "target_annotation_id": "region_003",
+      "viewer_zoom": 4.0,
+      "viewer_center": { "x": 0.6, "y": 0.82 },
+      "narration": "放大观察舟下的水波纹。马远以'折芦描'画出这几条轻淡的弧线，既表现了水的流动，又暗示了寒意。这就是中国画笔墨的魅力——简到极处，意到极处。",
+      "audio_url": "./data/demo_painting/audio/step_003.mp3"
+    },
+    {
+      "step_index": 4,
+      "target_annotation_id": "region_004",
+      "viewer_zoom": 2.5,
+      "viewer_center": { "x": 0.71, "y": 0.77 },
+      "narration": "这位渔翁，不仅仅是一个钓鱼的人。在中国文化中，'渔父'自《楚辞》起便是隐士的化身——他选择远离尘嚣，与自然共处。马远创作此画时，南宋已偏安江南，也许这孤舟中寄托着画家乃至一代文人的家国之思。",
+      "audio_url": "./data/demo_painting/audio/step_004.mp3"
+    },
+    {
+      "step_index": 5,
+      "target_annotation_id": "region_006",
+      "viewer_zoom": 1.0,
+      "viewer_center": { "x": 0.5, "y": 0.5 },
+      "narration": "最后，让我们再次欣赏整幅画的构图。马远将所有景物集中在右下一角，打破了北宋全景山水的传统。这种'边角构图'使他赢得了'马一角'的美誉，也开创了南宋院体山水的新风貌。这幅小画，承载的是一场视觉与心灵的革命。",
+      "audio_url": "./data/demo_painting/audio/step_005.mp3"
+    }
+  ]
+}
