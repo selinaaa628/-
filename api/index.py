@@ -1,11 +1,26 @@
 import sys
 import os
+import traceback
 
 root_dir = os.path.dirname(os.path.dirname(__file__))
-# 加入根目录以支持 from backend.main 导入
 sys.path.insert(0, root_dir)
-# 加入 backend 目录以支持内部 from app.api 导入
 sys.path.insert(0, os.path.join(root_dir, "backend"))
 
-# 从 backend.main 导入 fastapi 实例
-from backend.main import app
+try:
+    from backend.main import app
+except Exception as e:
+    from fastapi import FastAPI
+    app = FastAPI()
+    
+    error_msg = traceback.format_exc()
+    
+    @app.api_route("/{path:path}", methods=["GET", "POST", "PUT", "DELETE"])
+    async def catch_all(path: str):
+        return {
+            "error": "Failed to load backend.main",
+            "traceback": error_msg,
+            "sys_path": sys.path,
+            "cwd": os.getcwd(),
+            "files_in_root": os.listdir("."),
+            "files_in_backend": os.listdir("backend") if os.path.exists("backend") else None
+        }
