@@ -84,13 +84,13 @@ function App() {
     }
     setLoading(true);
     try {
-      await switchPainting(newId);
+      // Instead of relying on a stateful backend, we store the choice in the frontend
+      sessionStorage.setItem('activePaintingId', newId);
       sessionStorage.setItem('justSwitched', 'true');
       setShowSelector(false);
       window.location.reload();
     } catch (err) {
       console.error('切换失败', err);
-      // Fallback if backend doesn't support the new painting ID yet
       setShowSelector(false);
       setLoading(false);
     }

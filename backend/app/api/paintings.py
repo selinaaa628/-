@@ -29,15 +29,20 @@ def _read_json(path: str):
 # GET /api/paintings/active — 获取激活画作元数据
 # ─────────────────────────────────────────────
 @router.get("/active")
-async def get_active_painting():
+async def get_active_painting(painting_id: str = None):
     """获取当前激活画作的完整元数据"""
     svc = get_manifest_service()
-    painting_id = svc.get_active_painting_id()
-    metadata_path = svc.get_metadata_path(painting_id)
+    
+    if painting_id and painting_id in svc.get_manifest().paintings:
+        active_id = painting_id
+    else:
+        active_id = svc.get_active_painting_id()
+        
+    metadata_path = svc.get_metadata_path(active_id)
     metadata = _read_json(metadata_path)
 
     # 附加 manifest 中的附加路径信息
-    entry = svc.get_painting_entry(painting_id)
+    entry = svc.get_painting_entry(active_id)
     metadata["image_url"] = entry.image_url
     metadata["image_pyramid"] = entry.image_pyramid
 
