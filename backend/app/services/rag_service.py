@@ -7,7 +7,6 @@ import os
 import logging
 from typing import List, Dict, Optional, Tuple
 
-import numpy as np
 from openai import AsyncOpenAI
 
 from app.models.schemas import AskRequest, AskResponse, Citation
