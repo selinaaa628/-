@@ -18,7 +18,7 @@ const api = axios.create({
 });
 
 export async function fetchActivePainting(): Promise<PaintingMetadata> {
-  const activeId = sessionStorage.getItem('activePaintingId');
+  const activeId = localStorage.getItem('activePaintingId');
   const query = activeId ? `&painting_id=${activeId}` : '';
   const res = await api.get<StandardResponse<PaintingMetadata>>(`/api/paintings/active?t=${Date.now()}${query}`);
   return res.data.data;

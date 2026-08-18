@@ -15,8 +15,8 @@ import './App.css';
 type ViewMode = 'appreciate' | 'track';
 
 function App() {
-  const hasSeenOpening = sessionStorage.getItem('hasSeenOpening') === 'true';
-  const justSwitched = sessionStorage.getItem('justSwitched') === 'true';
+  const hasSeenOpening = localStorage.getItem('hasSeenOpening') === 'true';
+  const justSwitched = localStorage.getItem('justSwitched') === 'true';
   
   const [showOpening, setShowOpening] = useState(!hasSeenOpening);
   const [showSelector, setShowSelector] = useState(false);
@@ -34,7 +34,7 @@ function App() {
 
   useEffect(() => {
     if (justSwitched) {
-      sessionStorage.removeItem('justSwitched');
+      localStorage.removeItem('justSwitched');
     }
   }, [justSwitched]);
 
@@ -85,8 +85,8 @@ function App() {
     setLoading(true);
     try {
       // Instead of relying on a stateful backend, we store the choice in the frontend
-      sessionStorage.setItem('activePaintingId', newId);
-      sessionStorage.setItem('justSwitched', 'true');
+      localStorage.setItem('activePaintingId', newId);
+      localStorage.setItem('justSwitched', 'true');
       setShowSelector(false);
       window.location.reload();
     } catch (err) {
@@ -131,7 +131,7 @@ function App() {
     return (
       <OpeningDemo 
         onComplete={() => {
-          sessionStorage.setItem('hasSeenOpening', 'true');
+          localStorage.setItem('hasSeenOpening', 'true');
           setShowOpening(false);
           setShowSelector(true);
         }} 
@@ -179,7 +179,8 @@ function App() {
   }
 
   if (showSelector) {
-    return <PaintingSelector onSelect={handleSwitchPainting} />;
+    const activeId = metadata?.painting_id || 'qy_gaoshan';
+    return <PaintingSelector activeId={activeId} onSelect={handleSwitchPainting} />;
   }
 
   return (

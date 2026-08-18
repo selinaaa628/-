@@ -4,10 +4,11 @@ import imagesLoaded from 'imagesloaded';
 import './PaintingSelector.css';
 
 interface PaintingSelectorProps {
+  activeId: string;
   onSelect: (paintingId: string) => void;
 }
 
-const PaintingSelector: React.FC<PaintingSelectorProps> = ({ onSelect }) => {
+const PaintingSelector: React.FC<PaintingSelectorProps> = ({ activeId, onSelect }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -316,19 +317,19 @@ const PaintingSelector: React.FC<PaintingSelectorProps> = ({ onSelect }) => {
           </button>
 
           <div className="cards__wrapper">
-            <div className="card current--card" data-painting-id="qy_guifei">
+            <div className={`card ${activeId === 'qy_guifei' ? 'current--card' : activeId === 'qy_xunyang' ? 'next--card' : 'previous--card'}`} data-painting-id="qy_guifei">
               <div className="card__image">
                 <img src="/assets/贵妃晓妆.jpg" alt="贵妃晓妆" />
               </div>
             </div>
 
-            <div className="card next--card" data-painting-id="qy_gaoshan">
+            <div className={`card ${activeId === 'qy_gaoshan' ? 'current--card' : activeId === 'qy_guifei' ? 'next--card' : 'previous--card'}`} data-painting-id="qy_gaoshan">
               <div className="card__image">
                 <img src="/assets/高山流水.jpg" alt="高山流水" />
               </div>
             </div>
 
-            <div className="card previous--card" data-painting-id="qy_xunyang">
+            <div className={`card ${activeId === 'qy_xunyang' ? 'current--card' : activeId === 'qy_gaoshan' ? 'next--card' : 'previous--card'}`} data-painting-id="qy_xunyang">
               <div className="card__image">
                 <img src="/assets/浔阳琵琶.jpg" alt="浔阳琵琶" />
               </div>
@@ -346,19 +347,19 @@ const PaintingSelector: React.FC<PaintingSelectorProps> = ({ onSelect }) => {
 
         <div className="infoList">
           <div className="info__wrapper">
-            <div className="info current--info">
+            <div className={`info ${activeId === 'qy_guifei' ? 'current--info' : activeId === 'qy_xunyang' ? 'next--info' : 'previous--info'}`}>
               <h1 className="text name">贵妃晓妆</h1>
               <h4 className="text location">人物故事图册</h4>
               <p className="text description">仇英 · 明代</p>
             </div>
 
-            <div className="info next--info">
+            <div className={`info ${activeId === 'qy_gaoshan' ? 'current--info' : activeId === 'qy_guifei' ? 'next--info' : 'previous--info'}`}>
               <h1 className="text name">高山流水</h1>
               <h4 className="text location">人物故事图册</h4>
               <p className="text description">仇英 · 明代</p>
             </div>
 
-            <div className="info previous--info">
+            <div className={`info ${activeId === 'qy_xunyang' ? 'current--info' : activeId === 'qy_gaoshan' ? 'next--info' : 'previous--info'}`}>
               <h1 className="text name">浔阳琵琶</h1>
               <h4 className="text location">人物故事图册</h4>
               <p className="text description">仇英 · 明代</p>
@@ -367,13 +368,13 @@ const PaintingSelector: React.FC<PaintingSelectorProps> = ({ onSelect }) => {
         </div>
 
         <div className="selector__bg">
-          <div className="selector__bg__image current--image">
+          <div className={`selector__bg__image ${activeId === 'qy_guifei' ? 'current--image' : activeId === 'qy_xunyang' ? 'next--image' : 'previous--image'}`}>
             <img src="/assets/贵妃晓妆.jpg" alt="贵妃晓妆" />
           </div>
-          <div className="selector__bg__image next--image">
+          <div className={`selector__bg__image ${activeId === 'qy_gaoshan' ? 'current--image' : activeId === 'qy_guifei' ? 'next--image' : 'previous--image'}`}>
             <img src="/assets/高山流水.jpg" alt="高山流水" />
           </div>
-          <div className="selector__bg__image previous--image">
+          <div className={`selector__bg__image ${activeId === 'qy_xunyang' ? 'current--image' : activeId === 'qy_gaoshan' ? 'next--image' : 'previous--image'}`}>
             <img src="/assets/浔阳琵琶.jpg" alt="浔阳琵琶" />
           </div>
         </div>
