@@ -1,15 +1,27 @@
 import sys
 import os
-from fastapi import FastAPI
+import traceback
+import json
 
-app = FastAPI()
+def app(environ, start_response):
+    try:
+        import fastapi
+        import pydantic
+        import uvicorn
+        body = json.dumps({
+            "status": "success",
+            "sys_path": sys.path,
+            "fastapi": fastapi.__version__,
+            "cwd": os.getcwd(),
+        }).encode('utf-8')
+        status = '200 OK'
+    except Exception as e:
+        body = traceback.format_exc().encode('utf-8')
+        status = '500 Internal Server Error'
 
-@app.api_route("/{path:path}", methods=["GET", "POST", "PUT", "DELETE"])
-async def catch_all(path: str):
-    return {
-        "status": "Hello from pure FastAPI",
-        "sys_path": sys.path,
-        "cwd": os.getcwd(),
-        "files_in_root": os.listdir("."),
-        "files_in_backend": os.listdir("backend") if os.path.exists("backend") else None
-    }
+    response_headers = [
+        ('Content-type', 'application/json' if status == '200 OK' else 'text/plain'),
+        ('Content-Length', str(len(body)))
+    ]
+    start_response(status, response_headers)
+    return [body]
