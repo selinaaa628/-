@@ -82,7 +82,15 @@ app = FastAPI(
 frontend_url = os.getenv("FRONTEND_URL", "http://localhost:5173")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[frontend_url, "http://localhost:5173", "http://localhost:5174", "http://localhost:5175", "http://localhost:3000"],
+    allow_origins=[
+        frontend_url,
+        "http://localhost:5173",
+        "http://localhost:5174",
+        "http://localhost:5175",
+        "http://localhost:3000",
+        "https://www.ancient-painting.me",
+        "https://ancient-painting.me",
+    ],
     allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
@@ -114,6 +122,7 @@ async def debug_info():
         "PROJECT_ROOT": str(PROJECT_ROOT),
         "MANIFEST_PATH": str(MANIFEST_PATH),
         "MANIFEST_EXISTS": os.path.exists(MANIFEST_PATH),
+        "VERCEL_GIT_COMMIT_SHA": os.getenv("VERCEL_GIT_COMMIT_SHA", "unknown"),
     }
 
 
